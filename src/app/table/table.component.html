@@ -1,0 +1,68 @@
+<div class="container-fluid">
+
+    <div class="mat-elevation-z8">
+
+        <div fxLayout="row" fxLayoutAlign="space-around end">
+            <h5 fxFlex="70" id="incom">Incoming Entries</h5> <button id="buttondiv" mat-raised-button><mat-icon>cached</mat-icon>Sync</button></div>
+        <br>
+        <table mat-table [dataSource]="dataSource">
+
+            <!-- Checkbox Column -->
+            <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef>
+                    <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+                    </mat-checkbox>
+                </th>
+                <td mat-cell *matCellDef="let row">
+                    <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+                    </mat-checkbox>
+                </td>
+            </ng-container>
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="ID">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.Id| number:'3.0-0'}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="recordtype">
+                <th mat-header-cell *matHeaderCellDef> Record Type </th>
+                <td mat-cell *matCellDef="let element"> {{element.recordtype}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="fullname">
+                <th mat-header-cell *matHeaderCellDef> Full Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.fullname}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            </ng-container>
+            <ng-container matColumnDef="regime">
+                <th mat-header-cell *matHeaderCellDef> Regime </th>
+                <td mat-cell *matCellDef="let element"> {{element.regime}} </td>
+            </ng-container>
+            <ng-container matColumnDef="modifiedDate">
+                <th mat-header-cell *matHeaderCellDef> Modified Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.modifiedDate}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" routerLink="detaile/1">
+            </tr>
+
+
+        </table>
+
+        <div fxLayout="row" fxLayoutAlign="space-around end">
+            <h6 fxFlex="52">Total Records : {{length}}</h6>
+
+
+            <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"> </mat-paginator>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,177 @@
+<div class="container-fluid">
+
+    <div class="mat-elevation-z8">
+        <mat-toolbar fxLayout="row">
+            <button routerLink='/' mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>keyboard_backspace</mat-icon>
+   </button>
+
+            <span class="toolbartext">Incoming Entries</span>
+
+            <span class="example-spacer"></span>
+
+            <div fxLayout="row" class="listwithavtar">
+                <div fxFlex="30">
+                    <igx-avatar icon="person" [roundShape]="true" size="small">
+                    </igx-avatar>
+                </div>
+                <div fxFlex="40">
+                    <ul>
+                        <li>John Peter MC</li>
+                        <li>
+                            <div class="round-corner">Ref ID: QDi.133-q3</div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+        </mat-toolbar><br><br>
+        <div>
+            <span class="font-weight-bold" id="titletext">Identities</span>
+        </div>
+        <div class="container" id="coloredContainer">
+            <div class='expantion'>
+                <mat-accordion>
+
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" hideToggle="true">
+                        <mat-expansion-panel-header matBadge="1" matBadgeSize="large" matBadgePosition="before" [collapsedHeight]="'85px'" [expandedHeight]="'100px'">
+                            <mat-panel-title>
+                                <div style="display: flex; flex-direction: column;">
+                                    <div>Identity Type true:</div>
+                                    <div>Category:</div>
+                                    <div>Name:</div>
+                                </div>
+
+
+                            </mat-panel-title>
+
+                            <mat-panel-description>
+                                <div style="display: flex; flex-direction: column;">
+                                    <div>Primary</div>
+                                    <div>HIGH</div>
+                                    <div>John Mayer</div>
+                                </div>
+                                <span class="example-spacer"></span>
+                                <div class="customicon">
+                                    <mat-icon *ngIf="!panelOpenState" color="primary">add_circle_outline</mat-icon>
+                                </div>
+                                <div class="customicon">
+                                    <mat-icon *ngIf="panelOpenState" color="primary">remove_circle_outline</mat-icon>
+                                </div>
+                            </mat-panel-description>
+
+                        </mat-expansion-panel-header>
+                        <div fxLayout="row">
+                            <div fxFlex="31" style="display: flex; flex-direction: column;">
+                                <div class="matdesctitle">Name Original Script:</div>
+                                <div class="matdesctitle">Gender:</div>
+                                <div class="matdesctitle">Living Status:</div>
+                                <div class="matdesctitle">Nationalities:</div>
+                                <div class="matdesctitle">Titles:</div>
+                                <div class="matdesctitle">Biometric Information:</div>
+                                <div class="matdesctitle">Dates of Birth:</div>
+                                <div class="matdesctitle">Addresses:</div>
+                                <div class="matdesctitle">Features:</div>
+                                <div class="matdesc">Notes:</div>
+                            </div>
+                            <div fxFlex="30" style="display: flex; flex-direction: column;">
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">Male</div>
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">Indian</div>
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">-</div>
+                                <div class="matnote">Lipsum as it is sometimes known,is dummy text used in laying out print,graphic or web designs</div>
+                            </div>
+                        </div>
+
+
+
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+
+            <div class='expantion'>
+
+                <mat-accordion>
+
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" hideToggle="true">
+
+                        <mat-expansion-panel-header matBadge="2" matBadgeSize="large" matBadgePosition="before" [collapsedHeight]="'85px'" [expandedHeight]="'100px'">
+
+                            <mat-panel-title>
+
+                                <div style="display: flex; flex-direction: column;">
+                                    <div>Identity Type true:</div>
+                                    <div>Category:</div>
+                                    <div>Name:</div>
+                                </div>
+
+
+                            </mat-panel-title>
+
+                            <mat-panel-description>
+                                <div style="display: flex; flex-direction: column;">
+                                    <div>Secondary</div>
+                                    <div>LOW</div>
+                                    <div>Nicky</div>
+                                </div>
+                                <span class="example-spacer"></span>
+                                <div class="customicon">
+                                    <mat-icon *ngIf="!panelOpenState" color="primary">add_circle_outline</mat-icon>
+                                </div>
+                                <div class="customicon">
+                                    <mat-icon *ngIf="panelOpenState" color="primary">remove_circle_outline</mat-icon>
+                                </div>
+                            </mat-panel-description>
+
+                        </mat-expansion-panel-header>
+                        <div fxLayout="row">
+                            <div fxFlex="31" style="display: flex; flex-direction: column;">
+                                <div class="matdesctitle">Name Original Script:</div>
+                                <div class="matdesctitle">Gender:</div>
+                                <div class="matdesctitle">Living Status:</div>
+                                <div class="matdesctitle">Nationalities:</div>
+                                <div class="matdesctitle">Titles:</div>
+                                <div class="matdesctitle">Biometric Information:</div>
+                                <div class="matdesctitle">Dates of Birth:</div>
+                                <div class="matdesctitle">Addresses:</div>
+                                <div class="matdesctitle">Features:</div>
+                                <div class="matdesc">Notes:</div>
+                            </div>
+                            <div fxFlex="30" style="display: flex; flex-direction: column;">
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">Male</div>
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">Indian</div>
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">-</div>
+                                <div class="matdesc">-</div>
+                                <div class="matnote">Lipsum as it is sometimes known,is dummy text used in laying out print,graphic or web designs</div>
+                            </div>
+                        </div>
+
+
+
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center">
+
+            <button mat-raised-button color="accent" id='reject'>Reject</button>
+            <button mat-raised-button class="greenbutton">Approve</button>
+        </div>
+    </div>
+</div>
